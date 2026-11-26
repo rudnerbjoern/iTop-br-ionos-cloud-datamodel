@@ -1,0 +1,28 @@
+{
+  "name": "br-ionos-cloud-datamodel-docs",
+  "private": true,
+  "description": "Documentation checks for the IONOS Cloud extension",
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "lint:md": "markdownlint --config .markdownlint-cli2.jsonc --configPointer /config --dot --ignore-path .gitignore --ignore .git \"**/*.md\"",
+    "lint:spelling": "cspell lint --config cspell.json --dot --no-progress"
+  },
+  "devDependencies": {
+    "cspell": "10.5.2",
+    "markdownlint-cli": "0.50.0"
+  },
+  "overrides": {
+    "markdownlint-cli": {
+      "js-yaml": "5.5.0",
+      "smol-toml": "1.9.1"
+    },
+    "markdownlint": {
+      "re2js": "2.10.0"
+    },
+    "micromark-extension-math": {
+      "katex": "0.19.1"
+    }
+  }
+}
