@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<itop_design version="3.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://rudnerbjoern.github.io/iTop-schema/3.3/itop_design.xsd">
+  <classes>
+    <class id="Cloud" _delta="must_exist">
+      <fields>
+        <field id="ionos_sec_auth_protection" xsi:type="AttributeEnum" _delta="define">
+          <values>
+            <value id="unknown"><code>unknown</code></value>
+            <value id="yes"><code>yes</code></value>
+            <value id="no"><code>no</code></value>
+          </values>
+          <sql>ionos_sec_auth_protection</sql>
+          <default_value>unknown</default_value>
+          <is_null_allowed>false</is_null_allowed>
+        </field>
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="col:col1" _delta="must_exist">
+              <items>
+                <item id="fieldset:Cloud:IONOS" _delta="define">
+                  <rank>40</rank>
+                  <items>
+                    <item id="ionos_sec_auth_protection"><rank>10</rank></item>
+                  </items>
+                </item>
+              </items>
+            </item>
+          </items>
+        </details>
+      </presentation>
+    </class>
+    <class id="CloudNatGateway" _delta="must_exist">
+      <fields>
+        <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_source_key</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+    </class>
+    <class id="CloudNatGatewayLan" _delta="must_exist">
+      <fields>
+        <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_source_key</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+    </class>
+    <class id="CloudNatGatewayLanAddress" _delta="must_exist">
+      <fields>
+        <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_source_key</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ionos_synced_ip_id" xsi:type="AttributeInteger" _delta="define">
+          <sql>ionos_synced_ip_id</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+    </class>
+    <class id="CloudNatGatewayPublicAddress" _delta="must_exist">
+      <fields>
+        <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_source_key</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ionos_synced_ip_id" xsi:type="AttributeInteger" _delta="define">
+          <sql>ionos_synced_ip_id</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+    </class>
+  </classes>
+</itop_design>

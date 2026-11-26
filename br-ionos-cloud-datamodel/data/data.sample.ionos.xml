@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Set>
+  <!-- Source IDs are local import references. iTop assigns the database keys. -->
+  <Organization alias="Organization" id="73960100">
+    <name>IONOS</name>
+    <code>IONOS</code>
+    <status>active</status>
+  </Organization>
+  <Location alias="Location" id="73960101">
+    <name>de/fra</name>
+    <org_id>73960100</org_id>
+    <city>Frankfurt am Main</city>
+    <country>Germany</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960102">
+    <name>de/fra/1</name>
+    <org_id>73960100</org_id>
+    <city>Frankfurt am Main</city>
+    <country>Germany</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960103">
+    <name>de/fra/2</name>
+    <org_id>73960100</org_id>
+    <city>Frankfurt am Main</city>
+    <country>Germany</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960104">
+    <name>de/txl</name>
+    <org_id>73960100</org_id>
+    <city>Berlin</city>
+    <country>Germany</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960105">
+    <name>es/vit</name>
+    <org_id>73960100</org_id>
+    <city>Logroño</city>
+    <country>Spain</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960106">
+    <name>fr/par</name>
+    <org_id>73960100</org_id>
+    <city>Paris</city>
+    <country>France</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960107">
+    <name>gb/bhx</name>
+    <org_id>73960100</org_id>
+    <city>Worcester</city>
+    <country>United Kingdom</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960108">
+    <name>gb/lhr</name>
+    <org_id>73960100</org_id>
+    <city>London</city>
+    <country>United Kingdom</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960109">
+    <name>us/ewr</name>
+    <org_id>73960100</org_id>
+    <city>Newark</city>
+    <country>United States</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960110">
+    <name>us/las</name>
+    <org_id>73960100</org_id>
+    <city>Las Vegas</city>
+    <country>United States</country>
+    <status>active</status>
+  </Location>
+  <Location alias="Location" id="73960111">
+    <name>us/mci</name>
+    <org_id>73960100</org_id>
+    <city>Lenexa</city>
+    <country>United States</country>
+    <status>active</status>
+  </Location>
+</Set>

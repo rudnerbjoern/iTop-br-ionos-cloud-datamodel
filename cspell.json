@@ -1,0 +1,32 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": [
+    "bash",
+    "css",
+    "docker",
+    "html",
+    "node",
+    "npm",
+    "php",
+    "powershell",
+    "softwareTerms",
+    "typescript"
+  ],
+  "useGitignore": true,
+  "files": [
+    "**/*.md"
+  ],
+  "ignoreRegExpList": [
+    "/```[\\s\\S]*?```/g",
+    "/`[^`]*`/g",
+    "/https?:\\/\\/[^\\s)]+/g"
+  ],
+  "words": [
+    "CMDB",
+    "datamodel",
+    "IONOS",
+    "iTop",
+    "Combodo"
+  ]
+}

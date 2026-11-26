@@ -1,0 +1,14 @@
+{
+  "config": {
+    "default": true,
+    "MD013": false,
+    "MD036": false,
+    "MD060": {
+      "style": "aligned",
+      "aligned_delimiter": true
+    }
+  },
+  "globs": ["**/*.md"],
+  "gitignore": true,
+  "ignores": [".git/**", "node_modules/**", "vendor/**", ".tmp/**", "itop/**"]
+}

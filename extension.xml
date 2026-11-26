@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension format="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://rudnerbjoern.github.io/iTop-schema/extension.xsd">
+    <extension_code>br-ionos-cloud-datamodel</extension_code>
+    <company></company>
+    <author>Björn Rudner</author>
+    <label>IONOS Cloud data model</label>
+    <description>Extends the iTop cloud data model for IONOS Cloud infrastructure.</description>
+    <version>0.1.0</version>
+    <modules type="array">
+        <module><id>br-ionos-cloud-datamodel</id><version>0.1.0</version></module>
+    </modules>
+    <release_date>2026-11-26</release_date>
+    <version_description>Initial IONOS Cloud integration.</version_description>
+    <itop_version_min>3.3.0</itop_version_min>
+    <status>development</status>
+    <mandatory>false</mandatory>
+    <more_info_url></more_info_url>
+</extension>
