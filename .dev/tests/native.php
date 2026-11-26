@@ -41,12 +41,13 @@ final class RegistrationCapture
 class_alias(RegistrationCapture::class, 'SetupWebPage');
 require "$root/$ionos/module.$ionos.php";
 $addon = RegistrationCapture::$metadata;
-if ($addon['mandatory'] !== false || $addon['dependencies'] !== ['br-cloud-datamodel/0.1.0']
+if ($addon['mandatory'] !== false || $addon['dependencies'] !== ['br-cloud-datamodel/0.2.0']
     || $addon['data.sample'] !== ['data/data.sample.ionos.xml']) {
     throw new RuntimeException('Unexpected IONOS module registration.');
 }
 $model = simplexml_load_file("$root/$ionos/datamodel.$ionos.xml", SimpleXMLElement::class, LIBXML_NONET);
-foreach (['CloudNatGateway', 'CloudNatGatewayLan', 'CloudNatGatewayLanAddress', 'CloudNatGatewayPublicAddress'] as $class) {
+foreach (['CloudNatGateway', 'CloudNatGatewayLan', 'CloudNatGatewayLanAddress', 'CloudNatGatewayPublicAddress',
+    'CloudNetworkLoadBalancer', 'CloudNetworkLoadBalancerListenerAddress', 'CloudNetworkLoadBalancerBackendAddress'] as $class) {
     $expected = ['ionos_source_key' => 'AttributeString'];
     if (str_ends_with($class, 'Address')) {
         $expected['ionos_synced_ip_id'] = 'AttributeInteger';

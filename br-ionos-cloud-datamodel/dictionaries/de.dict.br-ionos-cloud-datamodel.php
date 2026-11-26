@@ -15,4 +15,10 @@ Dict::Add('DE DE', 'German', 'Deutsch', [
     'Class:CloudNatGatewayLanAddress/Attribute:ionos_synced_ip_id' => 'Letzter vom IONOS-Collector gesetzter IPAM-Verweis',
     'Class:CloudNatGatewayPublicAddress/Attribute:ionos_source_key' => 'IONOS-Importquelle',
     'Class:CloudNatGatewayPublicAddress/Attribute:ionos_synced_ip_id' => 'Letzter vom IONOS-Collector gesetzter IPAM-Verweis',
+
+    'Class:CloudNetworkLoadBalancer/Attribute:ionos_source_key' => 'IONOS-Importquelle',
+    'Class:CloudNetworkLoadBalancerListenerAddress/Attribute:ionos_source_key' => 'IONOS-Importquelle',
+    'Class:CloudNetworkLoadBalancerListenerAddress/Attribute:ionos_synced_ip_id' => 'Letzte vom IONOS-Collector gesetzte IPAM-Referenz',
+    'Class:CloudNetworkLoadBalancerBackendAddress/Attribute:ionos_source_key' => 'IONOS-Importquelle',
+    'Class:CloudNetworkLoadBalancerBackendAddress/Attribute:ionos_synced_ip_id' => 'Letzte vom IONOS-Collector gesetzte IPAM-Referenz',
 ]);

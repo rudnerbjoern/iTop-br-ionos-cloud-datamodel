@@ -1,12 +1,12 @@
 <?php
 /** Register IONOS-specific fields and sample records for the Cloud data model. */
 
-SetupWebPage::AddModule(__FILE__, 'br-ionos-cloud-datamodel/0.1.0', [
+SetupWebPage::AddModule(__FILE__, 'br-ionos-cloud-datamodel/0.2.0', [
     'label' => 'IONOS Cloud data model',
     'category' => 'business',
     'itop_version' => '3.3.0',
     'dependencies' => [
-        'br-cloud-datamodel/0.1.0',
+        'br-cloud-datamodel/0.2.0',
     ],
     'mandatory' => false,
     'visible' => true,
