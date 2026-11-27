@@ -96,6 +96,13 @@ foreach (['CloudNatGateway', 'CloudNatGatewayLan', 'CloudNatGatewayLanAddress', 
 }
 
 [$providerId, $locationIds] = sampleKeys();
+$vm = MetaModel::NewObject('VirtualMachine');
+$vmDetails = MetaModel::FlattenZList(MetaModel::GetZListItems('VirtualMachine', 'details'));
+foreach (['ionos_server_id', 'ionos_vdc_id', 'ionos_source_key', 'ionos_server_type'] as $code) {
+    if ((string) $vm->Get($code) !== '' || !in_array($code, $vmDetails, true)) {
+        throw new RuntimeException("Native VM reservations must expose a blank $code field.");
+    }
+}
 $details = MetaModel::FlattenZList(MetaModel::GetZListItems('Cloud', 'details'));
 if (!in_array('ionos_sec_auth_protection', $details, true)) {
     throw new RuntimeException('The Cloud details must include IONOS access protection.');

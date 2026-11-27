@@ -3,6 +3,10 @@
 
 Dict::Add('FR FR', 'French', 'Français', [
     'Cloud:IONOS' => 'IONOS',
+    'Class:VirtualMachine/Attribute:ionos_server_id' => 'Identifiant du serveur IONOS',
+    'Class:VirtualMachine/Attribute:ionos_vdc_id' => 'Identifiant du centre de données virtuel IONOS',
+    'Class:VirtualMachine/Attribute:ionos_source_key' => 'Source d’importation IONOS',
+    'Class:VirtualMachine/Attribute:ionos_server_type' => 'Type de serveur IONOS',
     'Class:Cloud/Attribute:ionos_sec_auth_protection' => 'Protection supplémentaire des accès',
     'Class:Cloud/Attribute:ionos_sec_auth_protection+' => 'Indique si IONOS exige une authentification supplémentaire pour accéder à ce centre de données virtuel.',
     'Class:Cloud/Attribute:ionos_sec_auth_protection/Value:unknown' => 'Inconnue',

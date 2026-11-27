@@ -2,7 +2,7 @@
 
 This extension adds IONOS-specific inventory to the provider-neutral Cloud data
 model for iTop 3.3. The IONOS collector uses both modules to import virtual
-datacenters, LANs, NAT and VPN gateways, and network load balancers.
+datacenters, virtual machines, LANs, NAT and VPN gateways, and network load balancers.
 
 See the [shared cloud inventory architecture](https://github.com/rudnerbjoern/iTop-br-cloud-datamodel/blob/main/docs/architecture/README.md) for the boundaries between the base model, this extension and the collector.
 
@@ -19,6 +19,15 @@ See the [shared cloud inventory architecture](https://github.com/rudnerbjoern/iT
 
 `Cloud.ionos_sec_auth_protection` records whether the IONOS VDC requires
 additional authentication. It defaults to **Unknown**.
+
+## IONOS virtual machines
+
+The IONOS section of native `VirtualMachine` details displays the server
+type, provider server and datacenter IDs, and collector source. The provider
+IDs and source identify a server across renames. The native virtual host
+links the VM to its Cloud, and the native CPU and RAM fields hold reported
+core count and memory in MB. A manually created reservation starts with
+empty IONOS fields.
 
 ## Network inventory ownership
 

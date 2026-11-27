@@ -31,6 +31,45 @@
         </details>
       </presentation>
     </class>
+    <class id="VirtualMachine" _delta="must_exist">
+      <fields>
+        <field id="ionos_server_id" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_server_id</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ionos_vdc_id" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_vdc_id</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_source_key</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+        <field id="ionos_server_type" xsi:type="AttributeString" _delta="define">
+          <sql>ionos_server_type</sql>
+          <is_null_allowed>true</is_null_allowed>
+        </field>
+      </fields>
+      <presentation>
+        <details>
+          <items>
+            <item id="col:col1" _delta="must_exist">
+              <items>
+                <item id="fieldset:Cloud:IONOS" _delta="define">
+                  <rank>40</rank>
+                  <items>
+                    <item id="ionos_server_type"><rank>10</rank></item>
+                    <item id="ionos_server_id"><rank>20</rank></item>
+                    <item id="ionos_vdc_id"><rank>30</rank></item>
+                    <item id="ionos_source_key"><rank>40</rank></item>
+                  </items>
+                </item>
+              </items>
+            </item>
+          </items>
+        </details>
+      </presentation>
+    </class>
     <class id="CloudNatGateway" _delta="must_exist">
       <fields>
         <field id="ionos_source_key" xsi:type="AttributeString" _delta="define">
