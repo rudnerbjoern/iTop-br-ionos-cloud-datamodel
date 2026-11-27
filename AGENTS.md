@@ -8,6 +8,23 @@ Treat MUST and MUST NOT as mandatory requirements.
 This project is in alpha. Backward compatibility with earlier project versions
 and upgrade paths between project versions are out of scope during alpha.
 
+## Publication and shared examples
+
+Keep real operational data and internal information private. Before publishing
+or sending material externally, including to external review models, check
+issues, comments, PRs, commits, documentation, fixtures, logs, screenshots and
+attachments for sensitive content.
+
+Use independently generated synthetic values for customer and internal data
+such as IDs, IP addresses, hostnames, resource names and account details.
+Preserve the formats, relationships and edge cases needed to understand the
+example. Use documentation address ranges for synthetic public IPs and reserved
+example domains for hostnames. Omit secrets and credentials entirely. Replace
+real output with a synthetic reproduction when its content cannot be shared.
+
+Publicly documented IONOS information may be quoted or linked. Keep customer
+values synthetic even when the IONOS fields that carry them are public.
+
 ## Project identity and scope
 
 This repository owns the optional IONOS extension of the provider-neutral Cloud data model for iTop 3.3. Reuse native iTop classes and relationships. Keep runtime modules in child directories and development checks under `.dev/`.
