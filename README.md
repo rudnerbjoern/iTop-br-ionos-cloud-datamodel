@@ -2,13 +2,13 @@
 
 This extension adds IONOS-specific inventory to the provider-neutral Cloud data
 model for iTop 3.3. The IONOS collector uses both modules to import virtual
-datacenters, LANs and NAT gateways.
+datacenters, LANs, NAT gateways and network load balancers.
 
 ## Installation
 
 1. Install the Cloud data model from the separate `iTop-br-cloud-datamodel`
    project. The required runtime module is `br-cloud-datamodel` version
-   `0.1.0` or later. That project also provides the optional TeemIP bridge.
+   `0.2.0` or later. That project also provides the optional TeemIP bridge.
 2. Extract the IONOS release ZIP and copy its outer `br-ionos-cloud-datamodel/`
    directory, containing `extension.xml`, into `<itop>/extensions/`.
 3. Run iTop Setup and select the IONOS extension.
@@ -18,11 +18,11 @@ datacenters, LANs and NAT gateways.
 `Cloud.ionos_sec_auth_protection` records whether the IONOS VDC requires
 additional authentication. It defaults to **Unknown**.
 
-## NAT inventory ownership
+## Network inventory ownership
 
 The collector records its source in `ionos_source_key` when creating gateways,
-LAN attachments and private or public address assignments. The two address
-classes also carry `ionos_synced_ip_id`, the iTop key of the last IPAM address
+LAN attachments, network load balancers and their address assignments. The
+address classes also carry `ionos_synced_ip_id`, the iTop key of the last IPAM address
 linked by the collector. A null or zero value indicates that it has no such
 address on record. The collector uses these fields to distinguish its own
 changes from manual assignments. They are omitted from the standard forms.
