@@ -5,9 +5,9 @@
     <author>Björn Rudner</author>
     <label>IONOS Cloud data model</label>
     <description>Extends the iTop cloud data model for IONOS Cloud infrastructure.</description>
-    <version>0.2.0</version>
+    <version>0.3.0</version>
     <modules type="array">
-        <module><id>br-ionos-cloud-datamodel</id><version>0.2.0</version></module>
+        <module><id>br-ionos-cloud-datamodel</id><version>0.3.0</version></module>
     </modules>
     <release_date>2026-11-26</release_date>
     <version_description>Initial IONOS Cloud integration.</version_description>

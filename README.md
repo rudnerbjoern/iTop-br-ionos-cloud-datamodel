@@ -2,7 +2,7 @@
 
 This extension adds IONOS-specific inventory to the provider-neutral Cloud data
 model for iTop 3.3. The IONOS collector uses both modules to import virtual
-datacenters, LANs, NAT gateways and network load balancers.
+datacenters, LANs, NAT and VPN gateways, and network load balancers.
 
 See the [shared cloud inventory architecture](https://github.com/rudnerbjoern/iTop-br-cloud-datamodel/blob/main/docs/architecture/README.md) for the boundaries between the base model, this extension and the collector.
 
@@ -10,7 +10,7 @@ See the [shared cloud inventory architecture](https://github.com/rudnerbjoern/iT
 
 1. Install the Cloud data model from the separate `iTop-br-cloud-datamodel`
    project. The required runtime module is `br-cloud-datamodel` version
-   `0.2.0` or later. That project also provides the optional TeemIP bridge.
+   `0.3.0` or later. That project also provides the optional TeemIP bridge.
 2. Extract the IONOS release ZIP and copy its outer `br-ionos-cloud-datamodel/`
    directory, containing `extension.xml`, into `<itop>/extensions/`.
 3. Run iTop Setup and select the IONOS extension.
@@ -30,6 +30,12 @@ address on record. The collector uses these fields to distinguish its own
 changes from manual assignments. They are omitted from the standard forms.
 Both fields are available without TeemIP so the add-on can be installed on
 either model variant.
+
+VPN gateways record the IONOS region, tier and reported provisioning status.
+The regional protocol list and configured organization, provider and contract
+identify their source namespace. The gateway's public endpoint also carries
+`ionos_synced_ip_id` so the collector can preserve manual changes to the
+TeemIP reference.
 
 ## Optional provider and location samples
 
