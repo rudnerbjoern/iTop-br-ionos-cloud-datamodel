@@ -3,6 +3,11 @@
 These instructions apply to every AI agent working in this repository.
 Treat MUST and MUST NOT as mandatory requirements.
 
+## Alpha development
+
+This project is in alpha. Backward compatibility with earlier project versions
+and upgrade paths between project versions are out of scope during alpha.
+
 ## Project identity and scope
 
 This repository owns the optional IONOS extension of the provider-neutral Cloud data model for iTop 3.3. Reuse native iTop classes and relationships. Keep runtime modules in child directories and development checks under `.dev/`.
