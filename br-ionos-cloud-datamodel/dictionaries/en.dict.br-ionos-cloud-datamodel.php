@@ -9,6 +9,11 @@ Dict::Add('EN US', 'English', 'English', [
     'Class:Cloud/Attribute:ionos_sec_auth_protection/Value:yes' => 'Yes',
     'Class:Cloud/Attribute:ionos_sec_auth_protection/Value:no' => 'No',
 
+    'Class:VirtualMachine/Attribute:ionos_server_id' => 'IONOS server ID',
+    'Class:VirtualMachine/Attribute:ionos_vdc_id' => 'IONOS virtual datacenter ID',
+    'Class:VirtualMachine/Attribute:ionos_source_key' => 'IONOS import source',
+    'Class:VirtualMachine/Attribute:ionos_server_type' => 'IONOS server type',
+
     'Class:CloudNatGateway/Attribute:ionos_source_key' => 'IONOS import source',
     'Class:CloudNatGatewayLan/Attribute:ionos_source_key' => 'IONOS import source',
     'Class:CloudNatGatewayLanAddress/Attribute:ionos_source_key' => 'IONOS import source',

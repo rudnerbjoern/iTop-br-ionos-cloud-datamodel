@@ -46,6 +46,15 @@ if ($addon['mandatory'] !== false || $addon['dependencies'] !== ['br-cloud-datam
     throw new RuntimeException('Unexpected IONOS module registration.');
 }
 $model = simplexml_load_file("$root/$ionos/datamodel.$ionos.xml", SimpleXMLElement::class, LIBXML_NONET);
+$vm = $model->xpath("classes/class[@id='VirtualMachine']")[0] ?? null;
+foreach (['ionos_server_id', 'ionos_vdc_id', 'ionos_source_key', 'ionos_server_type'] as $code) {
+    $field = $vm?->xpath("fields/field[@id='$code']")[0] ?? null;
+    if ($field === null || (string) $field->attributes('xsi', true)->type !== 'AttributeString'
+        || (string) $field->is_null_allowed !== 'true'
+        || !$vm->xpath("presentation/details//item[@id='$code']")) {
+        throw new RuntimeException("Unexpected VM identity or inventory field: $code");
+    }
+}
 foreach (['CloudNatGateway', 'CloudNatGatewayLan', 'CloudNatGatewayLanAddress', 'CloudNatGatewayPublicAddress',
     'CloudVpnGateway', 'CloudVpnGatewayLan', 'CloudVpnGatewayLanAddress', 'CloudVpnGatewayInterfaceAddress',
     'CloudNetworkLoadBalancer', 'CloudNetworkLoadBalancerListenerAddress', 'CloudNetworkLoadBalancerBackendAddress'] as $class) {
